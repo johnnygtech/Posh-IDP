@@ -1,0 +1,8 @@
+{
+    "dataDir": "./data",
+    "logDir": "./logs",
+    "tokenDir": "./tokens",
+    "jwtSigningKey": "",
+    "jwtIssuerId": "",
+    "jwtAudience": []
+}
