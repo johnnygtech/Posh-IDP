@@ -7,6 +7,8 @@ An Identity Provider / Token Issuer written leveraging the Polaris Project, my p
 3. Clone Posh-JWT and Posh-PWD from my repositories
  
 *Note: You must configure a shared key in the config.json file for the JWT implementation
+
+
 4. run ./start.ps1
 5. Create a user by posting this schema 
   {
