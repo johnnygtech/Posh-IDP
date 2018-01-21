@@ -9,7 +9,6 @@ $env:PSModulePath += ":$psScriptRoot/modules"
 Try
 {
     Import-Module Posh-Pwd
-    #https://github.com/johnnygtech/Posh-Pwd
 }
 catch
 {
@@ -50,7 +49,7 @@ catch
 $userNameHash = ""
 try 
 {
-    $userNameHash = Get-StringHash -string $sanitizedUsername
+    $userNameHash = Get-StringHash -string $sanitizedUsername -removeDash
 }
 catch 
 {

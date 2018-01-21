@@ -10,7 +10,6 @@ $env:PSModulePath += ":$psScriptRoot/modules"
 Try
 {
     Import-Module Posh-Jwt
-    #https://github.com/johnnygtech/Posh-Jwt
 }
 catch
 {
@@ -21,7 +20,6 @@ catch
 Try
 {
     Import-Module Posh-Pwd
-    #https://github.com/johnnygtech/Posh-Pwd
 }
 catch
 {

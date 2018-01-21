@@ -20,7 +20,7 @@ if ($request.QueryParameters['username']) {
     try
     {
         $sanitizedUsername = get-sanitizedString -string $request.QueryParameters['username'] -Tolower
-        $usernameHash = Get-StringHash -string $sanitizedUsername
+        $usernameHash = Get-StringHash -string $sanitizedUsername -removeDash
         if(!$(Test-Path -Path "./$($Config.dataDir)/$usernameHash.json"))
         {
             $response.send($(ConvertTo-Json -InputObject @{"statusCode"=200;"status"="Username_Available";"message"="The username: $($request.QueryParameters['username']) is available"}))

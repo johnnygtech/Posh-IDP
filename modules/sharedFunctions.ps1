@@ -1,11 +1,16 @@
 function Get-StringHash
 {
     param(
-        [parameter()][string]$String
+        [parameter()][string]$String,
+        [parameter()][switch]$removeDash
     );
-    $md5 = new-object -TypeName System.Security.Cryptography.MD5CryptoServiceProvider
+    $sha = new-object -TypeName System.Security.Cryptography.SHA256CryptoServiceProvider
     $utf8 = new-object -TypeName System.Text.UTF8Encoding
-    $hash = [System.BitConverter]::ToString($md5.ComputeHash($utf8.GetBytes($String)))
+    $hash = [System.BitConverter]::ToString($sha.ComputeHash($utf8.GetBytes($String)))
+    if($removeDash)
+    {
+        return $($hash -replace "-","")
+    }
     return $hash
 }
 

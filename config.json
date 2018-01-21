@@ -2,7 +2,7 @@
     "dataDir": "./data",
     "logDir": "./logs",
     "tokenDir": "./tokens",
-    "jwtSigningKey": "",
+    "jwtSigningKey": "CHANGEME",
     "jwtIssuerId": "",
     "jwtAudience": []
 }

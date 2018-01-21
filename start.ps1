@@ -5,7 +5,6 @@ set-location $PSScriptRoot
 Try
 {
     Import-Module Polaris
-    #https://github.com/johnnygtech/Polaris
 }
 catch
 {
