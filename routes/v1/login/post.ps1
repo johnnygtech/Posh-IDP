@@ -54,7 +54,7 @@ catch
 $userNameHash = ""
 try 
 {
-    $userNameHash = Get-StringHash -string $sanitizedUsername
+    $userNameHash = Get-StringHash -string $sanitizedUsername -removeDash
 }
 catch
 {
